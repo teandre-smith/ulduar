@@ -14,6 +14,70 @@ And as a current employee at Tensor Energy, a company looking to build to make m
 
 Not literally, this is only a general package for AWS DataAPI. But, this package is the result of working with AWS DataAPI often in Golang.
 
+## Examples
+
+### Set Up
+
+```go
+    api := ulduar.DataApi{
+        RDSClient: {rdsClient},
+        ResourceArn: {YourArn},
+        SecretArn: {YourArn},
+        Dbname: {YourDB},
+    }
+```
+
+### Table
+
+```go
+    err := api.CreateTable(&ulduar.Table{
+        Options: &ulduar.TableOptions{
+            Collections: SomeStruct{},
+            TableName: &someTable,
+        }
+    })
+```
+
+### Insert
+
+```go
+    err := api.InsertRecord(&ulduar.Insert{
+        Options: &ulduar.InsertOptions{
+            Collection: SomeStruct,
+        }
+    })
+```
+
+### Update
+
+```go
+    condition := "id = 1"
+
+    err := api.UpdateRecord(&ulduar.Update{
+        Options: &ulduar.UpdateOptions{
+            Collection: SomeStruct,
+            Condition: &condition
+        }
+    })
+```
+
+### Upsert
+
+```go
+    target := "some_column"
+
+    err := api.UpdateRecord(&ulduar.Update{
+        Options: &ulduar.UpdateOptions{
+            Collection: SomeStruct,
+            Target: &target
+        }
+    })
+```
+
 ## Want to Support?
 
 I am happy to accept any help from others. If you would like to help with the project, please feel free to create a pull request, but with each pull request, it is expected to have proper testing of each functionality. Any requests without any tests, will be denied.
+
+```
+
+```
