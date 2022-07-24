@@ -66,7 +66,7 @@ Not literally, this is only a general package for AWS DataAPI. But, this package
 ```go
     target := "some_column"
 
-    err := api.UpdateRecord(&ulduar.Update{
+    err := api.UpsertRecord(&ulduar.Update{
         Options: &ulduar.UpdateOptions{
             Collection: SomeStruct,
             Target: &target
@@ -77,7 +77,3 @@ Not literally, this is only a general package for AWS DataAPI. But, this package
 ## Want to Support?
 
 I am happy to accept any help from others. If you would like to help with the project, please feel free to create a pull request, but with each pull request, it is expected to have proper testing of each functionality. Any requests without any tests, will be denied.
-
-```
-
-```
