@@ -17,6 +17,10 @@ func GenerateUpdateSqlWithStruct(options *UpdateOptions) (string, error) {
 		return "", fmt.Errorf("error: UpdateOptions.Collection cannot be nil")
 	}
 
+	if options.Condition == nil || *options.Condition == "" {
+		return "", fmt.Errorf("error: UpdateOptions.Condition cannot be nil or empty")
+	}
+
 	table := getTableName(options.TableName, t.Name())
 
 	v := reflect.ValueOf(options.Collection)
