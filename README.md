@@ -27,6 +27,19 @@ Not literally, this is only a general package for AWS DataAPI. But, this package
     }
 ```
 
+### Struct Tags
+
+Ulduar uses the provided `datapi` struct tags as each struct field's column name. Below is an example
+
+```go
+    type SomeStruct struct{
+        SomeString string `datapi:"someString"`
+        SomeInt int64 `datapi:"some_int"`
+        SomeTime time.Time `datapi:"date"`
+        SomeFloat float64 `datapi:"myNumber"`
+    }
+```
+
 ### Table
 
 ```go
