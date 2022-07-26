@@ -6,14 +6,6 @@ This is a repository that attempts to make working with AWS DataAPI a bit easier
 
 Please take note that majority of these functions that generate statements using structs/collections will require a struct tag named `datapi` to formulate the column names.
 
-## Why Ulduar?
-
-Ulduar? Well, as a former player of World of Warcraft, us participants use to enter Ulduar and face only the most trusted Watchers of the ancient world. But Ulduar also housed the most technological assets, and in addition to that, Thorim. Who can also be known as Thor. He is the God associated with thunder, storms and other energy related superstition.
-
-And as a current employee at Tensor Energy, a company looking to build to make managing renewable assets easier, it only makes sense to name this basic package 'ulduar' since it is the home/manager of data that can be associated with energy.
-
-Not literally, this is only a general package for AWS DataAPI. But, this package is the result of working with AWS DataAPI often in Golang.
-
 ## Examples
 
 ### Set Up
